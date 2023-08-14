@@ -13,21 +13,27 @@
         android:theme="@style/Theme.Agenda"
         tools:targetApi="31">
         <activity
+            android:name=".VerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver"
+            android:theme="@style/Theme.Agenda" />
+        <activity
             android:name=".activity_nuevo"
-            android:parentActivityName=".activity_nuevo"
-            android:exported="true">
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

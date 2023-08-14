@@ -3,6 +3,7 @@ package com.example.agenda;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,10 +37,13 @@ public class activity_nuevo extends AppCompatActivity {
                 if(id>0){
                     Toast.makeText(activity_nuevo.this, "REGISTRO AGREGADO", Toast.LENGTH_LONG).show();
                     limpiar();
+                    Intent intent = new Intent(activity_nuevo.this, MainActivity.class);
+                    startActivity(intent);
                 } else{
                     Toast.makeText(activity_nuevo.this, "ERROR AL GUARDAR REGISTRO", Toast.LENGTH_LONG).show();
                 }
             }
+
         });
     }
     private  void  limpiar(){
